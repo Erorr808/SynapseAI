@@ -4,20 +4,23 @@ This folder hosts the runtime â€œmindâ€ stack for SynapseAI:
 
 - `Mastermind.js`: primary mastermind engine (single brain).
 - `Mastermind2.js`: dual mastermind orchestrator (two brains + consensus).
+- `Mastermind3.js`: triad mastermind orchestrator (three brains + ranking consensus).
 - `mastermind_bridge.js`: Node bridge so Python can drive the JS mastermind.
 - `Mind.py`: Python runtime that calls the bridge (with a Python fallback).
+- `Mind2.py`: advanced Python runtime that prefers `Mastermind3.js`.
 - `config.sample.json`: sample settings for dual mastermind.
 
 Typical usage (Python):
 ```python
-from SynapseAI import create_synapse_mind
-mind = create_synapse_mind(prefer_dual_mastermind=True)
+from SynapseAI import create_synapse_mind, create_synapse_mind2
+mind = create_synapse_mind(prefer_triple_mastermind=True)
+smart_mind = create_synapse_mind2()
 print(mind.think("Plan a robust evaluation pipeline.")["response"])
 ```
 
 Node/JS usage:
 ```js
-const { createSynapseMastermind } = require('./Mastermind2');
+const { createSynapseMastermind } = require('./Mastermind3');
 const mm = createSynapseMastermind();
 mm.think("Draft a prompt evaluation rubric.").then(console.log);
 ```

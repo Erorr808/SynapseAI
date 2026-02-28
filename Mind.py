@@ -480,7 +480,7 @@ class SynapseMind:
     """
     Python runtime wrapper for SynapseAI Mastermind.
 
-    - Primary mode: calls `SynapseAI/Mastermind2.js` (preferred) or `SynapseAI/Mastermind.js`
+    - Primary mode: calls `SynapseAI/Mastermind3.js` (preferred), `SynapseAI/Mastermind2.js`, or `SynapseAI/Mastermind.js`
       through `mastermind_bridge.js`.
     - Fallback mode: internal Python implementation when Node.js is unavailable.
     """
@@ -494,12 +494,13 @@ class SynapseMind:
         mind_config: Optional[MindConfig] = None,
         state_path: Optional[str] = None,
         prefer_dual_mastermind: bool = True,
+        prefer_triple_mastermind: bool = True,
     ) -> None:
         self.base_dir = Path(__file__).resolve().parent
         if mastermind_js_path:
             self.mastermind_js_path = Path(mastermind_js_path)
         else:
-            self.mastermind_js_path = self._resolve_default_mastermind_path(prefer_dual_mastermind)
+            self.mastermind_js_path = self._resolve_default_mastermind_path(prefer_dual_mastermind, prefer_triple_mastermind)
         self.bridge_script_path = Path(bridge_script_path) if bridge_script_path else self.base_dir / "mastermind_bridge.js"
         self.state_path = Path(state_path) if state_path else self.base_dir / "mind_state.json"
 
@@ -524,7 +525,10 @@ class SynapseMind:
     def mode(self) -> str:
         if not self._can_use_mastermind_js():
             return "python-fallback"
-        if self.mastermind_js_path.name.lower() == "mastermind2.js":
+        name = self.mastermind_js_path.name.lower()
+        if name == "mastermind3.js":
+            return "mastermind-js-triad"
+        if name == "mastermind2.js":
             return "mastermind-js-dual"
         return "mastermind-js"
 
@@ -540,16 +544,21 @@ class SynapseMind:
             return env_override
         return shutil.which("node") or shutil.which("nodejs")
 
-    def _resolve_default_mastermind_path(self, prefer_dual_mastermind: bool) -> Path:
+    def _resolve_default_mastermind_path(self, prefer_dual_mastermind: bool, prefer_triple_mastermind: bool = True) -> Path:
+        triad_path = self.base_dir / "Mastermind3.js"
         dual_path = self.base_dir / "Mastermind2.js"
         single_path = self.base_dir / "Mastermind.js"
 
+        if prefer_triple_mastermind and triad_path.exists() and triad_path.stat().st_size > 0:
+            return triad_path
         if prefer_dual_mastermind and dual_path.exists() and dual_path.stat().st_size > 0:
             return dual_path
         if single_path.exists() and single_path.stat().st_size > 0:
             return single_path
         if dual_path.exists():
             return dual_path
+        if triad_path.exists():
+            return triad_path
         return single_path
 
     def _can_use_mastermind_js(self) -> bool:
@@ -793,12 +802,14 @@ def create_synapse_mind(
     mastermind_config: Optional[Dict[str, Any]] = None,
     mind_config: Optional[MindConfig] = None,
     prefer_dual_mastermind: bool = True,
+    prefer_triple_mastermind: bool = True,
 ) -> SynapseMind:
     """Factory helper for building a SynapseMind instance."""
     return SynapseMind(
         mastermind_config=mastermind_config or {},
         mind_config=mind_config,
         prefer_dual_mastermind=prefer_dual_mastermind,
+        prefer_triple_mastermind=prefer_triple_mastermind,
     )
 
 
