@@ -7,6 +7,7 @@ import json
 from typing import Any, Dict, Optional
 
 from .Mind import SynapseMind, MindConfig
+from .Mind2 import SynapseMind2
 
 
 def load_config(config_path: Optional[str] = None) -> Dict[str, Any]:
@@ -33,4 +34,19 @@ def build_mind(config_path: Optional[str] = None) -> SynapseMind:
     )
 
 
-__all__ = ["load_config", "build_mind"]
+
+
+def build_mind2(config_path: Optional[str] = None) -> SynapseMind2:
+    cfg = load_config(config_path)
+    mind_cfg = cfg.get("mind", {})
+    return SynapseMind2(
+        mastermind_config=cfg,
+        mind_config=MindConfig(
+            request_timeout=int(mind_cfg.get("request_timeout", 45)),
+            fallback_to_python=bool(mind_cfg.get("fallback_to_python", True)),
+            auto_load_state=bool(mind_cfg.get("auto_load_state", True)),
+        ),
+    )
+
+
+__all__ = ["load_config", "build_mind", "build_mind2"]

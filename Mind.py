@@ -35,6 +35,19 @@ def _normalize_text(value: Any) -> str:
     return str(value).strip()
 
 
+def _normalize_token(token: str) -> str:
+    value = _normalize_text(token).lower()
+    if len(value) > 5 and value.endswith("ing"):
+        return value[:-3]
+    if len(value) > 4 and value.endswith("ed"):
+        return value[:-2]
+    if len(value) > 4 and value.endswith("es"):
+        return value[:-2]
+    if len(value) > 3 and value.endswith("s"):
+        return value[:-1]
+    return value
+
+
 def _tokenize(value: str) -> List[str]:
     text = _normalize_text(value).lower()
     clean = []
@@ -44,11 +57,11 @@ def _tokenize(value: str) -> List[str]:
             token.append(ch)
         else:
             if token:
-                clean.append("".join(token))
+                clean.append(_normalize_token("".join(token)))
                 token = []
     if token:
-        clean.append("".join(token))
-    return clean
+        clean.append(_normalize_token("".join(token)))
+    return [t for t in clean if t]
 
 
 class MindError(RuntimeError):
@@ -89,19 +102,59 @@ class _PythonFallbackMind:
         self.goals: List[Dict[str, Any]] = []
         self.knowledge: Dict[str, Dict[str, Any]] = {}
         self._goal_counter = 0
+        self._stopwords = {
+            "the", "a", "an", "and", "or", "to", "of", "for", "in", "on", "at", "is", "are", "be", "it",
+            "this", "that", "with", "as", "by", "from", "you", "i", "we", "they", "he", "she", "them", "our",
+            "your", "my", "me", "us", "can", "could", "should", "would", "will", "please", "make", "build",
+        }
 
     def _detect_intent(self, text: str) -> Dict[str, Any]:
         tokens = _tokenize(text)
         keyword_table = {
-            "coding": {"code", "debug", "bug", "refactor", "test", "python", "javascript"},
-            "planning": {"plan", "roadmap", "strategy", "schedule", "steps"},
-            "creative": {"story", "design", "brainstorm", "idea"},
-            "research": {"analyze", "compare", "explain", "why", "summary"},
+            "coding": {
+                "code": 1.0,
+                "debug": 1.3,
+                "bug": 1.2,
+                "refactor": 1.1,
+                "test": 1.1,
+                "python": 1.0,
+                "javascript": 1.0,
+                "implement": 0.9,
+                "fix": 1.1,
+            },
+            "planning": {
+                "plan": 1.2,
+                "roadmap": 1.3,
+                "strategy": 1.1,
+                "schedule": 1.1,
+                "step": 0.9,
+                "priorit": 0.9,
+                "milestone": 1.0,
+            },
+            "creative": {
+                "story": 1.2,
+                "design": 1.0,
+                "brainstorm": 1.2,
+                "idea": 1.0,
+                "creative": 1.0,
+            },
+            "research": {
+                "analyze": 1.2,
+                "compare": 1.0,
+                "explain": 1.0,
+                "summary": 0.9,
+                "evaluate": 1.1,
+                "improv": 0.8,
+                "smart": 0.8,
+            },
         }
 
-        scores = {name: 0 for name in keyword_table}
-        for name, words in keyword_table.items():
-            scores[name] = sum(1 for token in tokens if token in words)
+        scores = {name: 0.0 for name in keyword_table}
+        for token in tokens:
+            for name, words in keyword_table.items():
+                for keyword, weight in words.items():
+                    if token == keyword or token.startswith(keyword):
+                        scores[name] += weight
 
         primary = "conversation"
         if scores:
@@ -109,10 +162,10 @@ class _PythonFallbackMind:
             if scores[top_name] > 0:
                 primary = top_name
 
-        urgency_words = {"urgent", "asap", "now", "critical", "immediately"}
-        urgency = min(1.0, 0.3 * sum(1 for token in tokens if token in urgency_words))
-        complexity = min(1.0, len(tokens) / 24.0)
-        confidence = 0.75 if primary != "conversation" else 0.45
+        urgency_words = {"urgent", "asap", "now", "critical", "immediately", "today"}
+        urgency = min(1.0, 0.24 * sum(1 for token in tokens if token in urgency_words))
+        complexity = min(1.0, len(tokens) / 20.0)
+        confidence = 0.8 if primary != "conversation" else 0.5
 
         return {
             "primary": primary,
@@ -122,6 +175,49 @@ class _PythonFallbackMind:
             "confidence": confidence,
             "tokens": tokens,
         }
+
+    def _extract_focus_terms(self, tokens: List[str], limit: int = 6) -> List[str]:
+        ranked: List[str] = []
+        seen = set()
+        for token in tokens:
+            if len(token) < 3 or token in self._stopwords or token in seen:
+                continue
+            seen.add(token)
+            ranked.append(token)
+            if len(ranked) >= limit:
+                break
+        return ranked
+
+    def _find_relevant_memories(self, tokens: List[str], limit: int = 3) -> List[Dict[str, Any]]:
+        if not tokens:
+            return []
+
+        token_set = set(tokens)
+        scored = []
+        for entry in self.memory[-120:]:
+            blob_tokens = set(_tokenize(json.dumps(entry, ensure_ascii=False)))
+            overlap = len(token_set & blob_tokens)
+            if overlap > 0:
+                scored.append((overlap, entry))
+
+        scored.sort(key=lambda pair: pair[0], reverse=True)
+        return [entry for _, entry in scored[: max(1, limit)]]
+
+    def _recommend_next_actions(self, intent: Dict[str, Any]) -> List[str]:
+        steps = self._build_steps(intent["primary"])
+        actions = list(steps)
+
+        active_goals = self.list_goals({"status": "active", "limit": 1})
+        if active_goals:
+            actions.append(f"Align output to active goal: {active_goals[0]['title']}")
+
+        if intent["complexity"] >= 0.55:
+            actions.append("Deliver a phased answer with assumptions, execution, and verification.")
+
+        if intent["urgency"] >= 0.6:
+            actions.append("Prioritize immediate next step and defer optional improvements.")
+
+        return actions[:5]
 
     def _build_steps(self, intent: str) -> List[str]:
         if intent == "coding":
@@ -196,16 +292,21 @@ class _PythonFallbackMind:
         return item
 
     def query_knowledge(self, query: str, limit: int = 8) -> List[Dict[str, Any]]:
-        q = _normalize_text(query).lower()
+        query_tokens = set(_tokenize(query))
         values = list(self.knowledge.values())
-        if not q:
+        if not query_tokens:
             return values[: max(1, limit)]
+
         ranked = []
         for item in values:
-            blob = f"{item.get('key', '')} {item.get('value', '')}".lower()
-            score = 1 if q in blob else 0
-            if score:
-                ranked.append((score, item))
+            blob_tokens = set(_tokenize(f"{item.get('key', '')} {item.get('value', '')}"))
+            overlap = len(query_tokens & blob_tokens)
+            if overlap <= 0:
+                continue
+            confidence = float(item.get("confidence") or 0.5)
+            score = overlap + (confidence * 0.5)
+            ranked.append((score, item))
+
         ranked.sort(key=lambda pair: pair[0], reverse=True)
         return [item for _, item in ranked[: max(1, limit)]]
 
@@ -245,7 +346,10 @@ class _PythonFallbackMind:
 
         self.cycle_count += 1
         intent = self._detect_intent(safe_text)
-        steps = self._build_steps(intent["primary"])
+        steps = self._recommend_next_actions(intent)
+        focus_terms = self._extract_focus_terms(intent["tokens"])
+        relevant_memories = self._find_relevant_memories(intent["tokens"])
+        matched_knowledge = self.query_knowledge(" ".join(focus_terms), limit=3)
         uncertainty = max(0.0, min(1.0, 1.0 - intent["confidence"] + (intent["complexity"] * 0.2)))
         uncertainty = max(0.0, min(1.0, uncertainty * (1.1 - self.feedback_score * 0.2)))
 
@@ -273,11 +377,26 @@ class _PythonFallbackMind:
                 "I can still provide a first-pass draft if you want."
             )
         else:
+            knowledge_hint = ""
+            if matched_knowledge:
+                top_keys = [str(item.get("key")) for item in matched_knowledge[:2] if item.get("key")]
+                if top_keys:
+                    knowledge_hint = f"\nUseful prior knowledge: {', '.join(top_keys)}."
+
+            memory_hint = ""
+            if relevant_memories:
+                latest_summary = _normalize_text(relevant_memories[0].get("summary"))
+                if latest_summary:
+                    memory_hint = f"\nContext recalled: {latest_summary[:120]}."
+
             response = (
                 f"Objective received: {safe_text}\n"
                 f"Mode: {intent['primary']}.\n"
+                f"Focus terms: {', '.join(focus_terms) if focus_terms else 'general request'}.\n"
                 "Planned approach:\n"
                 + "\n".join(f"{idx + 1}. {step}" for idx, step in enumerate(steps))
+                + knowledge_hint
+                + memory_hint
             )
 
         self.remember("user-input", {"text": safe_text, "intent": intent}, {"source": "user"})
@@ -305,7 +424,9 @@ class _PythonFallbackMind:
                 "quality": {"score": self.feedback_score, "needsRevision": False},
                 "uncertainty": uncertainty,
                 "strategy": {"name": "Python Fallback", "style": "fallback", "score": self.feedback_score},
-                "contextStrength": 0.4,
+                "contextStrength": min(1.0, 0.35 + (0.12 * len(relevant_memories)) + (0.08 * len(matched_knowledge))),
+                "focusTerms": focus_terms,
+                "knowledgeMatches": matched_knowledge,
             },
             "status": self.get_status(),
         }
@@ -359,7 +480,7 @@ class SynapseMind:
     """
     Python runtime wrapper for SynapseAI Mastermind.
 
-    - Primary mode: calls `SynapseAI/Mastermind2.js` (preferred) or `SynapseAI/Mastermind.js`
+    - Primary mode: calls `SynapseAI/Mastermind3.js` (preferred), `SynapseAI/Mastermind2.js`, or `SynapseAI/Mastermind.js`
       through `mastermind_bridge.js`.
     - Fallback mode: internal Python implementation when Node.js is unavailable.
     """
@@ -373,12 +494,13 @@ class SynapseMind:
         mind_config: Optional[MindConfig] = None,
         state_path: Optional[str] = None,
         prefer_dual_mastermind: bool = True,
+        prefer_triple_mastermind: bool = True,
     ) -> None:
         self.base_dir = Path(__file__).resolve().parent
         if mastermind_js_path:
             self.mastermind_js_path = Path(mastermind_js_path)
         else:
-            self.mastermind_js_path = self._resolve_default_mastermind_path(prefer_dual_mastermind)
+            self.mastermind_js_path = self._resolve_default_mastermind_path(prefer_dual_mastermind, prefer_triple_mastermind)
         self.bridge_script_path = Path(bridge_script_path) if bridge_script_path else self.base_dir / "mastermind_bridge.js"
         self.state_path = Path(state_path) if state_path else self.base_dir / "mind_state.json"
 
@@ -403,7 +525,10 @@ class SynapseMind:
     def mode(self) -> str:
         if not self._can_use_mastermind_js():
             return "python-fallback"
-        if self.mastermind_js_path.name.lower() == "mastermind2.js":
+        name = self.mastermind_js_path.name.lower()
+        if name == "mastermind3.js":
+            return "mastermind-js-triad"
+        if name == "mastermind2.js":
             return "mastermind-js-dual"
         return "mastermind-js"
 
@@ -419,16 +544,21 @@ class SynapseMind:
             return env_override
         return shutil.which("node") or shutil.which("nodejs")
 
-    def _resolve_default_mastermind_path(self, prefer_dual_mastermind: bool) -> Path:
+    def _resolve_default_mastermind_path(self, prefer_dual_mastermind: bool, prefer_triple_mastermind: bool = True) -> Path:
+        triad_path = self.base_dir / "Mastermind3.js"
         dual_path = self.base_dir / "Mastermind2.js"
         single_path = self.base_dir / "Mastermind.js"
 
+        if prefer_triple_mastermind and triad_path.exists() and triad_path.stat().st_size > 0:
+            return triad_path
         if prefer_dual_mastermind and dual_path.exists() and dual_path.stat().st_size > 0:
             return dual_path
         if single_path.exists() and single_path.stat().st_size > 0:
             return single_path
         if dual_path.exists():
             return dual_path
+        if triad_path.exists():
+            return triad_path
         return single_path
 
     def _can_use_mastermind_js(self) -> bool:
@@ -552,6 +682,19 @@ class SynapseMind:
             options["responseTimeoutMs"] = response_timeout_ms
 
         result = self._dispatch("think", {"input": text, "options": options})
+
+        if isinstance(result, dict):
+            analysis = result.get("analysis") if isinstance(result.get("analysis"), dict) else {}
+            if "focusTerms" not in analysis:
+                analysis["focusTerms"] = _tokenize(text)[:6]
+            if "knowledgeMatches" not in analysis:
+                analysis["knowledgeMatches"] = []
+            if "contextStrength" not in analysis:
+                plan = result.get("plan") if isinstance(result.get("plan"), dict) else {}
+                uncertainty = float(plan.get("uncertainty") or 0.6)
+                analysis["contextStrength"] = max(0.2, min(1.0, 1.0 - (uncertainty * 0.6)))
+            result["analysis"] = analysis
+
         return result
 
     def run_cycle(self, text: str, source: str = "user") -> Dict[str, Any]:
@@ -659,12 +802,14 @@ def create_synapse_mind(
     mastermind_config: Optional[Dict[str, Any]] = None,
     mind_config: Optional[MindConfig] = None,
     prefer_dual_mastermind: bool = True,
+    prefer_triple_mastermind: bool = True,
 ) -> SynapseMind:
     """Factory helper for building a SynapseMind instance."""
     return SynapseMind(
         mastermind_config=mastermind_config or {},
         mind_config=mind_config,
         prefer_dual_mastermind=prefer_dual_mastermind,
+        prefer_triple_mastermind=prefer_triple_mastermind,
     )
 
 
