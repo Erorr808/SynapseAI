@@ -89,6 +89,11 @@ class _PythonFallbackMind:
         self.goals: List[Dict[str, Any]] = []
         self.knowledge: Dict[str, Dict[str, Any]] = {}
         self._goal_counter = 0
+        self._stopwords = {
+            "the", "a", "an", "and", "or", "to", "of", "for", "in", "on", "at", "is", "are", "be", "it",
+            "this", "that", "with", "as", "by", "from", "you", "i", "we", "they", "he", "she", "them", "our",
+            "your", "my", "me", "us", "can", "could", "should", "would", "will", "please", "make", "build",
+        }
 
     def _detect_intent(self, text: str) -> Dict[str, Any]:
         tokens = _tokenize(text)
@@ -122,6 +127,49 @@ class _PythonFallbackMind:
             "confidence": confidence,
             "tokens": tokens,
         }
+
+    def _extract_focus_terms(self, tokens: List[str], limit: int = 6) -> List[str]:
+        ranked: List[str] = []
+        seen = set()
+        for token in tokens:
+            if len(token) < 3 or token in self._stopwords or token in seen:
+                continue
+            seen.add(token)
+            ranked.append(token)
+            if len(ranked) >= limit:
+                break
+        return ranked
+
+    def _find_relevant_memories(self, tokens: List[str], limit: int = 3) -> List[Dict[str, Any]]:
+        if not tokens:
+            return []
+
+        token_set = set(tokens)
+        scored = []
+        for entry in self.memory[-120:]:
+            blob = json.dumps(entry, ensure_ascii=False).lower()
+            overlap = sum(1 for token in token_set if token in blob)
+            if overlap > 0:
+                scored.append((overlap, entry))
+
+        scored.sort(key=lambda pair: pair[0], reverse=True)
+        return [entry for _, entry in scored[: max(1, limit)]]
+
+    def _recommend_next_actions(self, intent: Dict[str, Any]) -> List[str]:
+        steps = self._build_steps(intent["primary"])
+        actions = list(steps)
+
+        active_goals = self.list_goals({"status": "active", "limit": 1})
+        if active_goals:
+            actions.append(f"Align output to active goal: {active_goals[0]['title']}")
+
+        if intent["complexity"] >= 0.55:
+            actions.append("Deliver a phased answer with assumptions, execution, and verification.")
+
+        if intent["urgency"] >= 0.6:
+            actions.append("Prioritize immediate next step and defer optional improvements.")
+
+        return actions[:5]
 
     def _build_steps(self, intent: str) -> List[str]:
         if intent == "coding":
@@ -245,7 +293,10 @@ class _PythonFallbackMind:
 
         self.cycle_count += 1
         intent = self._detect_intent(safe_text)
-        steps = self._build_steps(intent["primary"])
+        steps = self._recommend_next_actions(intent)
+        focus_terms = self._extract_focus_terms(intent["tokens"])
+        relevant_memories = self._find_relevant_memories(intent["tokens"])
+        matched_knowledge = self.query_knowledge(" ".join(focus_terms), limit=3)
         uncertainty = max(0.0, min(1.0, 1.0 - intent["confidence"] + (intent["complexity"] * 0.2)))
         uncertainty = max(0.0, min(1.0, uncertainty * (1.1 - self.feedback_score * 0.2)))
 
@@ -273,11 +324,26 @@ class _PythonFallbackMind:
                 "I can still provide a first-pass draft if you want."
             )
         else:
+            knowledge_hint = ""
+            if matched_knowledge:
+                top_keys = [str(item.get("key")) for item in matched_knowledge[:2] if item.get("key")]
+                if top_keys:
+                    knowledge_hint = f"\nUseful prior knowledge: {', '.join(top_keys)}."
+
+            memory_hint = ""
+            if relevant_memories:
+                latest_summary = _normalize_text(relevant_memories[0].get("summary"))
+                if latest_summary:
+                    memory_hint = f"\nContext recalled: {latest_summary[:120]}."
+
             response = (
                 f"Objective received: {safe_text}\n"
                 f"Mode: {intent['primary']}.\n"
+                f"Focus terms: {', '.join(focus_terms) if focus_terms else 'general request'}.\n"
                 "Planned approach:\n"
                 + "\n".join(f"{idx + 1}. {step}" for idx, step in enumerate(steps))
+                + knowledge_hint
+                + memory_hint
             )
 
         self.remember("user-input", {"text": safe_text, "intent": intent}, {"source": "user"})
@@ -305,7 +371,9 @@ class _PythonFallbackMind:
                 "quality": {"score": self.feedback_score, "needsRevision": False},
                 "uncertainty": uncertainty,
                 "strategy": {"name": "Python Fallback", "style": "fallback", "score": self.feedback_score},
-                "contextStrength": 0.4,
+                "contextStrength": min(1.0, 0.35 + (0.12 * len(relevant_memories)) + (0.08 * len(matched_knowledge))),
+                "focusTerms": focus_terms,
+                "knowledgeMatches": matched_knowledge,
             },
             "status": self.get_status(),
         }
