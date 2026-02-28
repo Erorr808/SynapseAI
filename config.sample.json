@@ -1,0 +1,19 @@
+{
+  "modelName": "SynapseAI-Dual",
+  "modelVersion": "2.0.0-dual",
+  "consensusMode": "blend",
+  "enableBlendedResponse": true,
+  "primaryModel": {
+    "temperature": 0.18,
+    "max_tokens": 1200
+  },
+  "secondaryModel": {
+    "temperature": 0.45,
+    "max_tokens": 1400
+  },
+  "mind": {
+    "request_timeout": 45,
+    "fallback_to_python": true,
+    "auto_load_state": true
+  }
+}
