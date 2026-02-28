@@ -35,6 +35,19 @@ def _normalize_text(value: Any) -> str:
     return str(value).strip()
 
 
+def _normalize_token(token: str) -> str:
+    value = _normalize_text(token).lower()
+    if len(value) > 5 and value.endswith("ing"):
+        return value[:-3]
+    if len(value) > 4 and value.endswith("ed"):
+        return value[:-2]
+    if len(value) > 4 and value.endswith("es"):
+        return value[:-2]
+    if len(value) > 3 and value.endswith("s"):
+        return value[:-1]
+    return value
+
+
 def _tokenize(value: str) -> List[str]:
     text = _normalize_text(value).lower()
     clean = []
@@ -44,11 +57,11 @@ def _tokenize(value: str) -> List[str]:
             token.append(ch)
         else:
             if token:
-                clean.append("".join(token))
+                clean.append(_normalize_token("".join(token)))
                 token = []
     if token:
-        clean.append("".join(token))
-    return clean
+        clean.append(_normalize_token("".join(token)))
+    return [t for t in clean if t]
 
 
 class MindError(RuntimeError):
@@ -98,15 +111,50 @@ class _PythonFallbackMind:
     def _detect_intent(self, text: str) -> Dict[str, Any]:
         tokens = _tokenize(text)
         keyword_table = {
-            "coding": {"code", "debug", "bug", "refactor", "test", "python", "javascript"},
-            "planning": {"plan", "roadmap", "strategy", "schedule", "steps"},
-            "creative": {"story", "design", "brainstorm", "idea"},
-            "research": {"analyze", "compare", "explain", "why", "summary"},
+            "coding": {
+                "code": 1.0,
+                "debug": 1.3,
+                "bug": 1.2,
+                "refactor": 1.1,
+                "test": 1.1,
+                "python": 1.0,
+                "javascript": 1.0,
+                "implement": 0.9,
+                "fix": 1.1,
+            },
+            "planning": {
+                "plan": 1.2,
+                "roadmap": 1.3,
+                "strategy": 1.1,
+                "schedule": 1.1,
+                "step": 0.9,
+                "priorit": 0.9,
+                "milestone": 1.0,
+            },
+            "creative": {
+                "story": 1.2,
+                "design": 1.0,
+                "brainstorm": 1.2,
+                "idea": 1.0,
+                "creative": 1.0,
+            },
+            "research": {
+                "analyze": 1.2,
+                "compare": 1.0,
+                "explain": 1.0,
+                "summary": 0.9,
+                "evaluate": 1.1,
+                "improv": 0.8,
+                "smart": 0.8,
+            },
         }
 
-        scores = {name: 0 for name in keyword_table}
-        for name, words in keyword_table.items():
-            scores[name] = sum(1 for token in tokens if token in words)
+        scores = {name: 0.0 for name in keyword_table}
+        for token in tokens:
+            for name, words in keyword_table.items():
+                for keyword, weight in words.items():
+                    if token == keyword or token.startswith(keyword):
+                        scores[name] += weight
 
         primary = "conversation"
         if scores:
@@ -114,10 +162,10 @@ class _PythonFallbackMind:
             if scores[top_name] > 0:
                 primary = top_name
 
-        urgency_words = {"urgent", "asap", "now", "critical", "immediately"}
-        urgency = min(1.0, 0.3 * sum(1 for token in tokens if token in urgency_words))
-        complexity = min(1.0, len(tokens) / 24.0)
-        confidence = 0.75 if primary != "conversation" else 0.45
+        urgency_words = {"urgent", "asap", "now", "critical", "immediately", "today"}
+        urgency = min(1.0, 0.24 * sum(1 for token in tokens if token in urgency_words))
+        complexity = min(1.0, len(tokens) / 20.0)
+        confidence = 0.8 if primary != "conversation" else 0.5
 
         return {
             "primary": primary,
@@ -147,8 +195,8 @@ class _PythonFallbackMind:
         token_set = set(tokens)
         scored = []
         for entry in self.memory[-120:]:
-            blob = json.dumps(entry, ensure_ascii=False).lower()
-            overlap = sum(1 for token in token_set if token in blob)
+            blob_tokens = set(_tokenize(json.dumps(entry, ensure_ascii=False)))
+            overlap = len(token_set & blob_tokens)
             if overlap > 0:
                 scored.append((overlap, entry))
 
@@ -244,16 +292,21 @@ class _PythonFallbackMind:
         return item
 
     def query_knowledge(self, query: str, limit: int = 8) -> List[Dict[str, Any]]:
-        q = _normalize_text(query).lower()
+        query_tokens = set(_tokenize(query))
         values = list(self.knowledge.values())
-        if not q:
+        if not query_tokens:
             return values[: max(1, limit)]
+
         ranked = []
         for item in values:
-            blob = f"{item.get('key', '')} {item.get('value', '')}".lower()
-            score = 1 if q in blob else 0
-            if score:
-                ranked.append((score, item))
+            blob_tokens = set(_tokenize(f"{item.get('key', '')} {item.get('value', '')}"))
+            overlap = len(query_tokens & blob_tokens)
+            if overlap <= 0:
+                continue
+            confidence = float(item.get("confidence") or 0.5)
+            score = overlap + (confidence * 0.5)
+            ranked.append((score, item))
+
         ranked.sort(key=lambda pair: pair[0], reverse=True)
         return [item for _, item in ranked[: max(1, limit)]]
 
@@ -620,6 +673,19 @@ class SynapseMind:
             options["responseTimeoutMs"] = response_timeout_ms
 
         result = self._dispatch("think", {"input": text, "options": options})
+
+        if isinstance(result, dict):
+            analysis = result.get("analysis") if isinstance(result.get("analysis"), dict) else {}
+            if "focusTerms" not in analysis:
+                analysis["focusTerms"] = _tokenize(text)[:6]
+            if "knowledgeMatches" not in analysis:
+                analysis["knowledgeMatches"] = []
+            if "contextStrength" not in analysis:
+                plan = result.get("plan") if isinstance(result.get("plan"), dict) else {}
+                uncertainty = float(plan.get("uncertainty") or 0.6)
+                analysis["contextStrength"] = max(0.2, min(1.0, 1.0 - (uncertainty * 0.6)))
+            result["analysis"] = analysis
+
         return result
 
     def run_cycle(self, text: str, source: str = "user") -> Dict[str, Any]:
