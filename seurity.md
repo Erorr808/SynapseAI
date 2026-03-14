@@ -21,7 +21,6 @@ Do **NOT** open a public GitHub issue for security vulnerabilities.
 
 Instead, report vulnerabilities by contacting the maintainers:
 
-Email: security@synapseai.dev  
 GitHub: https://github.com/Erorr808
 
 Include the following information:
