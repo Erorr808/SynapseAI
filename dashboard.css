@@ -1,0 +1,12 @@
+.dashboard {
+  display: grid;
+  gap: 12px;
+}
+
+.dashboard-card {
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid #1f2937;
+}
+
