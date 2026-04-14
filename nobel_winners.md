@@ -1,0 +1,689 @@
+# Nobel Prize Winners and Laureates
+
+The Nobel Prizes recognize outstanding contributions in Physics, Chemistry, Physiology or Medicine, Literature, Peace, and Economic Sciences.
+
+## Nobel Prize Categories
+
+### Physics
+- **1901**: Wilhelm Röntgen - X-ray discovery
+- **1902**: Hendrik Lorentz, Pieter Zeeman - Zeeman effect
+- **1903**: Henri Becquerel, Pierre Curie, Marie Curie - radioactivity
+- **1904**: Lord Rayleigh - argon discovery
+- **1905**: Philipp Lenard - cathode rays
+- **1906**: J.J. Thomson - electron discovery
+- **1907**: Albert Michelson - spectroscopic precision measurements
+- **1908**: Gabriel Lippmann - color photography
+- **1909**: Guglielmo Marconi, Karl Braun - wireless telegraphy
+- **1910**: Johannes van der Waals - molecular forces
+- **1911**: Wilhelm Wien - heat radiation laws
+- **1912**: Nils Gustaf Dalén - automatic regulators
+- **1913**: Heike Kamerlingh Onnes - superconductivity
+- **1914**: Max von Laue - X-ray diffraction
+- **1915**: William Henry Bragg, William Lawrence Bragg - X-ray analysis
+- **1916**: No award
+- **1917**: Charles Glover Barkla - X-ray characteristic radiation
+- **1918**: Max Planck - quantum theory
+- **1919**: Johannes Stark - Doppler effect in canal rays
+- **1920**: Charles Édouard Guillaume - nickel steel alloys
+- **1921**: Albert Einstein - photoelectric effect
+- **1922**: Niels Bohr - atomic structure and radiation
+- **1923**: Robert Andrews Millikan - elementary charge
+- **1924**: Karl Manne Georg Siegbahn - X-ray spectroscopy
+- **1925**: James Franck, Gustav Hertz - Franck-Hertz experiment
+- **1926**: Jean Baptiste Perrin - discontinuous structure of matter
+- **1927**: Arthur Compton - Compton effect; Charles Thomson Rees Wilson - cloud chamber
+- **1928**: Owen Willans Richardson - thermionic phenomenon
+- **1929**: Louis de Broglie - wave nature of electrons
+- **1930**: Chandrasekhara Venkata Raman - Raman effect
+- **1931**: No award
+- **1932**: Werner Heisenberg - quantum mechanics
+- **1933**: Erwin Schrödinger, Paul Dirac - quantum mechanics
+- **1934**: No award
+- **1935**: James Chadwick - neutron discovery
+- **1936**: Victor Francis Hess - cosmic radiation; Carl David Anderson - positron
+- **1937**: Clinton Davisson, George Thomson - electron diffraction
+- **1938**: Enrico Fermi - artificial radioactivity
+- **1939**: Ernest Lawrence - cyclotron
+- **1940**: No award
+- **1941**: No award
+- **1942**: No award
+- **1943**: Otto Stern - molecular beam method
+- **1944**: Isidor Isaac Rabi - magnetic resonance
+- **1945**: Wolfgang Pauli - exclusion principle
+- **1946**: Percy Williams Bridgman - high-pressure physics
+- **1947**: Edward Victor Appleton - Appleton layer
+- **1948**: Patrick Maynard Stuart Blackett - cloud chamber and cosmic rays
+- **1949**: Hideki Yukawa - meson theory
+- **1950**: Cecil Frank Powell - photographic method for nuclear processes
+- **1951**: John Cockcroft, Ernest Walton - transmutation of atomic nuclei
+- **1952**: Felix Bloch, Edward Mills Purcell - nuclear magnetic resonance
+- **1953**: Frits Zernike - phase-contrast microscopy
+- **1954**: Max Born - statistical interpretation of quantum mechanics; Walther Bothe - coincidence method
+- **1955**: Willis Eugene Lamb - hydrogen spectrum; Polykarp Kusch - electron magnetic moment
+- **1956**: William Shockley, John Bardeen, Walter Brattain - transistor
+- **1957**: Chen Ning Yang, Tsung-Dao Lee - parity violation
+- **1958**: Pavel Alekseyevich Cherenkov, Ilya Frank, Igor Tamm - Cherenkov radiation
+- **1959**: Owen Chamberlain, Emilio Segrè - antiproton
+- **1960**: Donald Arthur Glaser - bubble chamber
+- **1961**: Robert Hofstadter - electron scattering; Rudolf Ludwig Mössbauer - Mössbauer effect
+- **1962**: Lev Landau - superfluidity theory
+- **1963**: Eugene Wigner - atomic nucleus and elementary particles; Maria Goeppert-Mayer, J. Hans D. Jensen - nuclear shell structure
+- **1964**: Charles Hard Townes, Nicolay Gennadiyevich Basov, Aleksandr Prokhorov - maser-laser principle
+- **1965**: Sin-Itiro Tomonaga, Julian Schwinger, Richard Feynman - quantum electrodynamics
+- **1966**: Alfred Kastler - optical pumping
+- **1967**: Hans Bethe - stellar energy production
+- **1968**: Luis Alvarez - particle physics discoveries
+- **1969**: Murray Gell-Mann - elementary particle theory
+- **1970**: Hannes Alfvén - magnetohydrodynamics; Louis Néel - antiferromagnetism and ferrimagnetism
+- **1971**: Dennis Gabor - holography
+- **1972**: John Bardeen, Leon Cooper, John Robert Schrieffer - superconductivity theory
+- **1973**: Leo Esaki, Ivar Giaever - tunneling in semiconductors and superconductors; Brian Josephson - Josephson effect
+- **1974**: Antony Hewish - pulsars; Martin Ryle - radio telescopes
+- **1975**: Aage Bohr, Ben Mottelson, Leo James Rainwater - atomic nucleus structure
+- **1976**: Burton Richter, Samuel Ting - J/ψ particle
+- **1977**: Philip Warren Anderson, Nevill Francis Mott, John Hasbrouck Van Vleck - magnetic and disordered systems
+- **1978**: Pyotr Kapitsa - low-temperature physics; Arno Allan Penzias, Robert Woodrow Wilson - cosmic microwave background
+- **1979**: Sheldon Glashow, Abdus Salam, Steven Weinberg - electroweak theory
+- **1980**: James Cronin, Val Fitch - CP violation
+- **1981**: Nicolaas Bloembergen, Arthur Schawlow - laser spectroscopy; Kai Siegbahn - electron spectroscopy
+- **1982**: Kenneth Wilson - phase transitions
+- **1983**: Subrahmanyan Chandrasekhar - stellar structure; William Alfred Fowler - nucleosynthesis
+- **1984**: Carlo Rubbia, Simon van der Meer - W and Z particles
+- **1985**: Klaus von Klitzing - quantum Hall effect
+- **1986**: Ernst Ruska - electron microscope; Gerd Binnig, Heinrich Rohrer - scanning tunneling microscope
+- **1987**: Johannes Georg Bednorz, Karl Alexander Müller - high-temperature superconductivity
+- **1988**: Leon Lederman, Melvin Schwartz, Jack Steinberger - neutrino beam
+- **1989**: Norman Foster Ramsey - atomic clocks; Hans Georg Dehmelt, Wolfgang Paul - ion trap
+- **1990**: Jerome Friedman, Henry Kendall, Richard Taylor - quark structure
+- **1991**: Pierre-Gilles de Gennes - complex materials
+- **1992**: Georges Charpak - particle detectors
+- **1993**: Russell Hulse, Joseph Taylor - binary pulsars
+- **1994**: Bertram Brockhouse - neutron scattering; Clifford Shull - neutron diffraction
+- **1995**: Martin Perl - tau lepton; Frederick Reines - neutrino
+- **1996**: David Lee, Douglas Osheroff, Robert Richardson - superfluidity in helium-3
+- **1997**: Steven Chu, Claude Cohen-Tannoudji, William Daniel Phillips - laser cooling and trapping
+- **1998**: Robert B. Laughlin, Horst L. Störmer, Daniel C. Tsui - fractional quantum Hall effect
+- **1999**: Gerardus 't Hooft, Martinus Veltman - quantum field theory
+- **2000**: Zhores Alferov, Herbert Kroemer - semiconductor heterostructures; Jack Kilby - integrated circuit
+- **2001**: Eric Cornell, Wolfgang Ketterle, Carl Wieman - Bose-Einstein condensate
+- **2002**: Raymond Davis Jr., Masatoshi Koshiba - neutrino oscillations; Riccardo Giacconi - cosmic X-ray sources
+- **2003**: Alexei Alexeyevich Abrikosov, Vitaly Ginzburg, Anthony James Leggett - superconductivity and superfluidity
+- **2004**: David Gross, Hugh David Politzer, Frank Wilczek - asymptotic freedom
+- **2005**: Roy Glauber - quantum optics; John Hall, Theodor Hänsch - laser-based precision spectroscopy
+- **2006**: John Mather, George Smoot - cosmic microwave background
+- **2007**: Albert Fert, Peter Grünberg - giant magnetoresistance
+- **2008**: Yoichiro Nambu - spontaneous symmetry breaking; Makoto Kobayashi, Toshihide Maskawa - quark mixing
+- **2009**: Charles Kao - optical fiber communications; Willard Boyle, George Smith - charge-coupled device
+- **2010**: Andre Geim, Konstantin Novoselov - graphene
+- **2011**: Saul Perlmutter, Brian Schmidt, Adam Riess - accelerating universe expansion
+- **2012**: Serge Haroche, David Wineland - quantum systems measurement
+- **2013**: François Englert, Peter Higgs - Higgs boson
+- **2014**: Isamu Akasaki, Hiroshi Amano, Shuji Nakamura - blue LED
+- **2015**: Takaaki Kajita, Arthur McDonald - neutrino oscillations
+- **2016**: David Thouless, Duncan Haldane, John Michael Kosterlitz - topological phase transitions
+- **2017**: Rainer Weiss, Barry Barish, Kip Thorne - LIGO gravitational waves
+- **2018**: Arthur Ashkin - optical tweezers; Gérard Mourou, Donna Strickland - chirped pulse amplification
+- **2019**: James Peebles - physical cosmology; Michel Mayor, Didier Queloz - exoplanets
+- **2020**: Roger Penrose - black hole formation; Reinhard Genzel, Andrea Ghez - supermassive black hole
+- **2021**: Syukuro Manabe, Klaus Hasselmann - climate modeling; Giorgio Parisi - disordered systems
+- **2022**: Alain Aspect, John Clauser, Anton Zeilinger - quantum entanglement
+- **2023**: Pierre Agostini, Ferenc Krausz, Anne L'Huillier - attosecond physics
+
+### Chemistry
+- **1901**: Jacobus Henricus van 't Hoff - chemical dynamics and osmotic pressure
+- **1902**: Emil Fischer - sugar and purine syntheses
+- **1903**: Svante Arrhenius - electrolytic dissociation theory
+- **1904**: William Ramsay - inert gaseous elements
+- **1905**: Adolf von Baeyer - organic dyes and hydroaromatic compounds
+- **1906**: Henri Moissan - fluorine isolation
+- **1907**: Eduard Buchner - biochemical research and fermentation
+- **1908**: Ernest Rutherford - radioactive substances
+- **1909**: Wilhelm Ostwald - catalysis and chemical equilibria
+- **1910**: Otto Wallach - alicyclic compounds
+- **1911**: Marie Curie - radium and polonium
+- **1912**: Victor Grignard, Paul Sabatier - organometallic compounds
+- **1913**: Alfred Werner - molecular structure
+- **1914**: Theodore Richards - atomic weights
+- **1915**: Richard Willstätter - plant pigments
+- **1916**: No award
+- **1917**: No award
+- **1918**: Fritz Haber - ammonia synthesis
+- **1919**: No award
+- **1920**: Walther Nernst - thermochemistry
+- **1921**: Frederick Soddy - radioactive substances and isotopes
+- **1922**: Francis Aston - mass spectrograph and isotopes
+- **1923**: Fritz Pregl - microanalysis of organic substances
+- **1924**: No award
+- **1925**: Richard Zsigmondy - colloid chemistry
+- **1926**: Theodor Svedberg - disperse systems
+- **1927**: Heinrich Wieland - bile acids constitution
+- **1928**: Adolf Windaus - sterols and vitamins
+- **1929**: Arthur Harden, Hans von Euler-Chelpin - fermentation
+- **1930**: Hans Fischer - hemin and chlorophyll structure
+- **1931**: Carl Bosch, Friedrich Bergius - high-pressure chemistry
+- **1932**: Irving Langmuir - surface chemistry
+- **1933**: No award
+- **1934**: Harold Urey - heavy hydrogen
+- **1935**: Frédéric Joliot, Irène Joliot-Curie - artificial radioactivity
+- **1936**: Petrus Josephus Wilhelmus Debye - molecular structure
+- **1937**: Walter Haworth - carbohydrates and vitamin C; Paul Karrer - carotenoids and vitamins
+- **1938**: Richard Kuhn - carotenoids and vitamins
+- **1939**: Adolf Butenandt - sexual hormones; Leopold Ruzicka - polymethylenes and terpenes
+- **1940**: No award
+- **1941**: No award
+- **1942**: No award
+- **1943**: Georg Wittig - phosphorus ylides
+- **1944**: Otto Hahn - nuclear fission
+- **1945**: Artturi Ilmari Virtanen - agricultural and nutrition chemistry
+- **1946**: James Sumner - enzyme crystallization; John Northrop, Wendell Stanley - enzyme and virus purification
+- **1947**: Robert Robinson - alkaloids
+- **1948**: Arne Tiselius - electrophoresis and adsorption analysis
+- **1949**: William Giauque - chemical thermodynamics
+- **1950**: Otto Diels, Kurt Alder - diene synthesis
+- **1951**: Edwin McMillan, Glenn Seaborg - transuranium elements
+- **1952**: Archer Martin, Richard Synge - partition chromatography
+- **1953**: Hermann Staudinger - macromolecular chemistry
+- **1954**: Linus Pauling - chemical bond nature
+- **1955**: Vincent du Vigneaud - biochemically important sulfur compounds
+- **1956**: Cyril Hinshelwood, Nikolay Semyonov - chemical reaction mechanisms
+- **1957**: Alexander Todd - nucleotides and nucleotide co-enzymes
+- **1958**: Frederick Sanger - insulin structure
+- **1959**: Jaroslav Heyrovský - polarography
+- **1960**: Willard Libby - radiocarbon dating
+- **1961**: Melvin Calvin - carbon dioxide assimilation
+- **1962**: Max Perutz, John Kendrew - protein structures
+- **1963**: Karl Ziegler, Giulio Natta - polymer chemistry
+- **1964**: Dorothy Hodgkin - vitamin B12 structure
+- **1965**: Robert Woodward - organic synthesis
+- **1966**: Robert Mulliken - chemical bonds and molecular orbitals
+- **1967**: Manfred Eigen - fast chemical reactions; Ronald Norrish, George Porter - flash photolysis
+- **1968**: Lars Onsager - irreversible thermodynamics
+- **1969**: Derek Barton, Odd Hassel - conformational analysis
+- **1970**: Luis Leloir - sugar nucleotides and carbohydrates
+- **1971**: Gerhard Herzberg - molecular spectroscopy
+- **1972**: Christian Anfinsen - ribonuclease structure; Stanford Moore, William Stein - ribonuclease sequence
+- **1973**: Ernst Otto Fischer, Geoffrey Wilkinson - organometallic sandwich compounds
+- **1974**: Paul Flory - macromolecular physical chemistry
+- **1975**: John Cornforth - stereochemistry of enzyme-catalyzed reactions; Vladimir Prelog - stereochemistry
+- **1976**: William Lipscomb - borane structures
+- **1977**: Ilya Prigogine - non-equilibrium thermodynamics
+- **1978**: Peter Mitchell - biological energy transfer
+- **1979**: Herbert Brown, Georg Wittig - boron and phosphorus chemistry
+- **1980**: Paul Berg - nucleic acid biochemistry; Walter Gilbert, Frederick Sanger - nucleic acid sequencing
+- **1981**: Kenichi Fukui, Roald Hoffmann - chemical reaction theory
+- **1982**: Aaron Klug - crystallographic electron microscopy
+- **1983**: Henry Taube - electron transfer mechanisms
+- **1984**: Robert Merrifield - solid-phase peptide synthesis
+- **1985**: Herbert Hauptman, Jerome Karle - direct methods in crystallography
+- **1986**: Dudley Herschbach, Yuan Lee, John Polanyi - chemical reaction dynamics
+- **1987**: Charles Pedersen - crown ethers; Donald Cram - molecular recognition; Jean-Marie Lehn - supramolecular chemistry
+- **1988**: Johann Deisenhofer, Robert Huber, Hartmut Michel - photosynthetic reaction center
+- **1989**: Sidney Altman, Thomas Cech - catalytic RNA
+- **1990**: Elias Corey - retrosynthetic analysis
+- **1991**: Richard Ernst - nuclear magnetic resonance spectroscopy
+- **1992**: Rudolph Marcus - electron transfer theory
+- **1993**: Kary Mullis - polymerase chain reaction; Michael Smith - site-directed mutagenesis
+- **1994**: George Olah - carbocation chemistry
+- **1995**: Paul Crutzen, Mario Molina, Sherwood Rowland - ozone depletion
+- **1996**: Robert Curl, Harold Kroto, Richard Smalley - fullerenes
+- **1997**: Jens Christian Skou - sodium-potassium pump; Paul Boyer, John Walker - ATP synthase
+- **1998**: Walter Kohn - density functional theory; John Pople - computational chemistry
+- **1999**: Ahmed Zewail - femtochemistry
+- **2000**: Alan Heeger, Alan MacDiarmid, Hideki Shirakawa - conductive polymers
+- **2001**: William Knowles, Ryoji Noyori - asymmetric hydrogenation; Barry Sharpless - catalytic asymmetric oxidation
+- **2002**: John Fenn, Koichi Tanaka - mass spectrometry of biological macromolecules; Kurt Wüthrich - NMR protein structure
+- **2003**: Peter Agre - aquaporins; Roderick MacKinnon - ion channels
+- **2004**: Aaron Ciechanover, Avram Hershko, Irwin Rose - ubiquitin-mediated protein degradation
+- **2005**: Yves Chauvin, Robert Grubbs, Richard Schrock - metathesis in organic synthesis
+- **2006**: Roger Kornberg - eukaryotic transcription
+- **2007**: Gerhard Ertl - chemical processes on solid surfaces
+- **2008**: Osamu Shimomura, Martin Chalfie, Roger Tsien - green fluorescent protein
+- **2009**: Venkatraman Ramakrishnan, Thomas Steitz, Ada Yonath - ribosome structure
+- **2010**: Richard Heck, Ei-ichi Negishi, Akira Suzuki - palladium-catalyzed cross couplings
+- **2011**: Dan Shechtman - quasicrystals
+- **2012**: Brian Kobilka, Robert Lefkowitz - G-protein-coupled receptors
+- **2013**: Martin Karplus, Michael Levitt, Arieh Warshel - multiscale models for complex chemical systems
+- **2014**: Eric Betzig, Stefan Hell, William Moerner - super-resolved fluorescence microscopy
+- **2015**: Tomas Lindahl, Paul Modrich, Aziz Sancar - DNA repair mechanisms
+- **2016**: Jean-Pierre Sauvage, Fraser Stoddart, Ben Feringa - molecular machines
+- **2017**: Jacques Dubochet, Joachim Frank, Richard Henderson - cryo-electron microscopy
+- **2018**: Frances Arnold - directed evolution of enzymes; George Smith, Gregory Winter - phage display of peptides and antibodies
+- **2019**: John Goodenough, M. Stanley Whittingham, Akira Yoshino - lithium-ion batteries
+- **2020**: Emmanuelle Charpentier, Jennifer Doudna - CRISPR-Cas9 genome editing
+- **2021**: David MacMillan, Benjamin List - asymmetric organocatalysis
+- **2022**: Carolyn Bertozzi, Morten Meldal, Karl Barry Sharpless - click chemistry and bioorthogonal chemistry
+- **2023**: Moungi Bawendi, Louis Brus, Alexei Ekimov - quantum dots
+
+### Physiology or Medicine
+- **1901**: Emil von Behring - diphtheria serum
+- **1902**: Ronald Ross - malaria transmission
+- **1903**: Niels Ryberg Finsen - light treatment of diseases
+- **1904**: Ivan Pavlov - digestive physiology
+- **1905**: Robert Koch - tuberculosis research
+- **1906**: Camillo Golgi, Santiago Ramón y Cajal - nervous system structure
+- **1907**: Charles Laveran - malaria parasites
+- **1908**: Paul Ehrlich - immunity research; Ilya Mechnikov - phagocytosis
+- **1909**: Theodor Kocher - thyroid physiology and surgery
+- **1910**: Albrecht Kossel - nucleic acid research
+- **1911**: Allvar Gullstrand - dioptrics of the eye
+- **1912**: Alexis Carrel - vascular suture and transplantation
+- **1913**: Charles Richet - anaphylaxis
+- **1914**: Robert Bárány - vestibular apparatus
+- **1915**: No award
+- **1916**: No award
+- **1917**: No award
+- **1918**: No award
+- **1919**: Jules Bordet - immunity complement
+- **1920**: August Krogh - capillary motor regulating mechanism
+- **1921**: No award
+- **1922**: Archibald Hill, Otto Meyerhof - muscle metabolism
+- **1923**: Frederick Banting, John Macleod - insulin discovery
+- **1924**: Willem Einthoven - electrocardiogram
+- **1925**: No award
+- **1926**: Johannes Fibiger - Spiroptera carcinoma
+- **1927**: Julius Wagner-Jauregg - malaria fever treatment
+- **1928**: Charles Nicolle - typhus transmission
+- **1929**: Christiaan Eijkman - vitamin deficiency diseases; Frederick Hopkins - growth-stimulating vitamins
+- **1930**: Karl Landsteiner - blood groups
+- **1931**: Otto Warburg - respiratory enzyme
+- **1932**: Edgar Adrian, Charles Sherrington - neuron function
+- **1933**: Thomas Morgan - chromosome heredity
+- **1934**: George Whipple, George Minot, William Murphy - pernicious anemia treatment
+- **1935**: Hans Spemann - embryonic development organizer
+- **1936**: Otto Loewi - chemical nerve transmission
+- **1937**: Albert Szent-Györgyi - vitamin C and fumaric acid
+- **1938**: Corneille Heymans - carotid sinus regulation
+- **1939**: Gerhard Domagk - prontosil antibacterial
+- **1940**: No award
+- **1941**: No award
+- **1942**: No award
+- **1943**: Henrik Dam - vitamin K; Edward Doisy - vitamin K structure
+- **1944**: Joseph Erlanger, Herbert Gasser - nerve fiber function
+- **1945**: Ernst Chain, Howard Florey, Alexander Fleming - penicillin
+- **1946**: Hermann Müller - X-ray mutagenesis
+- **1947**: Carl Cori, Gerty Cori - glycogen metabolism; Bernardo Houssay - pituitary hormone
+- **1948**: Paul Müller - DDT insecticide
+- **1949**: Walter Hess - diencephalon function; Antonio Egas Moniz - prefrontal leucotomy
+- **1950**: Edward Kendall, Tadeus Reichstein, Philip Hench - adrenal cortex hormones
+- **1951**: Max Theiler - yellow fever vaccine
+- **1952**: Selman Waksman - streptomycin
+- **1953**: Hans Krebs - citric acid cycle; Fritz Lipmann - coenzyme A
+- **1954**: John Enders, Thomas Weller, Frederick Robbins - polio virus cultivation
+- **1955**: Axel Hugo Theodor Theorell - oxidation enzymes
+- **1956**: André Cournand, Werner Forssmann, Dickinson Richards - heart catheterization
+- **1957**: Daniel Bovet - antihistamines and curare
+- **1958**: George Beadle, Edward Tatum - gene regulation; Joshua Lederberg - genetic recombination
+- **1959**: Arthur Kornberg - DNA synthesis; Severo Ochoa - RNA synthesis
+- **1960**: Frank Burnet, Peter Medawar - immunological tolerance
+- **1961**: Georg von Békésy - cochlear function
+- **1962**: Francis Crick, James Watson, Maurice Wilkins - DNA structure
+- **1963**: John Eccles, Alan Hodgkin, Andrew Huxley - nerve cell membrane
+- **1964**: Konrad Bloch, Feodor Lynen - cholesterol and fatty acid metabolism
+- **1965**: François Jacob, André Lwoff, Jacques Monod - genetic control
+- **1966**: Peyton Rous - tumor viruses; Charles Huggins - hormone cancer treatment
+- **1967**: Ragnar Granit, Haldan Hartline, George Wald - visual system
+- **1968**: Robert Holley - transfer RNA; Har Gobind Khorana, Marshall Nirenberg - genetic code
+- **1969**: Max Delbrück, Alfred Hershey, Salvador Luria - bacteriophage replication
+- **1970**: Julius Axelrod, Bernard Katz, Ulf von Euler - neurotransmitter storage and release
+- **1971**: Earl Sutherland - hormone action mechanisms
+- **1972**: Gerald Edelman, Rodney Porter - antibody structure
+- **1973**: Karl von Frisch, Konrad Lorenz, Nikolaas Tinbergen - animal behavior patterns
+- **1974**: Albert Claude, Christian de Duve, George Palade - cell structure and function
+- **1975**: David Baltimore, Renato Dulbecco, Howard Temin - tumor virus interaction
+- **1976**: Baruch Blumberg, Daniel Gajdusek - hepatitis B and kuru
+- **1977**: Roger Guillemin, Andrew Schally - peptide hormone production; Rosalyn Yalow - radioimmunoassay
+- **1978**: Werner Arber, Daniel Nathans, Hamilton Smith - restriction enzymes
+- **1979**: Allan Cormack, Godfrey Hounsfield - computed tomography
+- **1980**: Baruj Benacerraf, Jean Dausset, George Snell - histocompatibility complex
+- **1981**: Roger Sperry - brain hemisphere functions; David Hubel, Torsten Wiesel - visual system information processing
+- **1982**: Sune Bergström, Bengt Samuelsson, John Vane - prostaglandins
+- **1983**: Barbara McClintock - mobile genetic elements
+- **1984**: Niels Jerne, Georges Köhler, César Milstein - monoclonal antibodies
+- **1985**: Michael Brown, Joseph Goldstein - cholesterol metabolism regulation
+- **1986**: Stanley Cohen, Rita Levi-Montalcini - growth factors
+- **1987**: Susumu Tonegawa - antibody diversity generation
+- **1988**: James Black, Gertrude Elion, George Hitchings - drug development
+- **1989**: J. Michael Bishop, Harold Varmus - oncogene discovery
+- **1990**: Joseph Murray, E. Donnall Thomas - organ transplantation
+- **1991**: Erwin Neher, Bert Sakmann - ion channel function
+- **1992**: Edmond Fischer, Edwin Krebs - protein phosphorylation
+- **1993**: Richard Roberts, Phillip Sharp - split genes
+- **1994**: Alfred Gilman, Martin Rodbell - G-protein signal transduction
+- **1995**: Edward Lewis, Christiane Nüsslein-Volhard, Eric Wieschaus - genetic control of embryonic development
+- **1996**: Peter Doherty, Rolf Zinkernagel - cellular immunity
+- **1997**: Stanley Prusiner - prions
+- **1998**: Robert Furchgott, Louis Ignarro, Ferid Murad - nitric oxide signaling
+- **1999**: Günter Blobel - protein transport signals
+- **2000**: Arvid Carlsson, Paul Greengard, Eric Kandel - signal transduction in nervous system
+- **2001**: Leland Hartwell, Tim Hunt, Paul Nurse - cell cycle regulation
+- **2002**: Sydney Brenner, H. Robert Horvitz, John Sulston - programmed cell death
+- **2003**: Paul Lauterbur, Peter Mansfield - magnetic resonance imaging
+- **2004**: Richard Axel, Linda Buck - olfactory receptors
+- **2005**: Barry Marshall, Robin Warren - Helicobacter pylori and ulcers
+- **2006**: Andrew Fire, Craig Mello - RNA interference
+- **2007**: Mario Capecchi, Martin Evans, Oliver Smithies - gene targeting in mice
+- **2008**: Harald zur Hausen - HPV and cervical cancer; Françoise Barré-Sinoussi, Luc Montagnier - HIV discovery
+- **2009**: Elizabeth Blackburn, Carol Greider, Jack Szostak - telomere and telomerase
+- **2010**: Robert Edwards - in vitro fertilization
+- **2011**: Bruce Beutler, Jules Hoffmann - innate immunity; Ralph Steinman - dendritic cells
+- **2012**: John Gurdon, Shinya Yamanaka - cell reprogramming
+- **2013**: James Rothman, Randy Schekman, Thomas Südhof - vesicle trafficking
+- **2014**: John O'Keefe - brain navigation; May-Britt Moser, Edvard Moser - brain grid cells
+- **2015**: William Campbell, Satoshi Ōmura - antiparasitic drugs; Tu Youyou - artemisinin
+- **2016**: Yoshinori Ohsumi - autophagy
+- **2017**: Jeffrey Hall, Michael Rosbash, Michael Young - circadian rhythms
+- **2018**: James Allison, Tasuku Honjo - cancer immunotherapy
+- **2019**: William Kaelin Jr., Peter Ratcliffe, Gregg Semenza - oxygen sensing
+- **2020**: Harvey Alter, Michael Houghton, Charles Rice - hepatitis C virus
+- **2021**: David Julius, Ardem Patapoutian - temperature and touch receptors
+- **2022**: Svante Pääbo - human evolution genomics
+- **2023**: Katalin Karikó, Drew Weissman - mRNA vaccine development
+
+### Literature
+- **1901**: Sully Prudhomme - poetic inspiration and ideals
+- **1902**: Theodor Mommsen - Roman history writing
+- **1903**: Bjørnstjerne Bjørnson - contemporary prose
+- **1904**: Frédéric Mistral - Provençal literature revival; José Echegaray - modern drama
+- **1905**: Henryk Sienkiewicz - historical novels
+- **1906**: Giosuè Carducci - classical tradition in poetry
+- **1907**: Rudyard Kipling - observation and narrative talent
+- **1908**: Rudolf Christoph Eucken - idealistic philosophy
+- **1909**: Selma Lagerlöf - Swedish folklore inspiration
+- **1910**: Paul Heyse - artistic perfection in poetry and drama
+- **1911**: Maurice Maeterlinck - dramatic works
+- **1912**: Gerhart Hauptmann - dramatic compositions
+- **1913**: Rabindranath Tagore - poetic works
+- **1914**: No award
+- **1915**: Romain Rolland - humanitarian ideals in literature
+- **1916**: Verner von Heidenstam - historical writings
+- **1917**: Karl Gjellerup, Henrik Pontoppidan - idealistic tendencies
+- **1918**: No award
+- **1919**: Carl Spitteler - epic poem "Olympian Spring"
+- **1920**: Knut Hamsun - "Growth of the Soil"
+- **1921**: Anatole France - literary works
+- **1922**: Jacinto Benavente - contemporary Spanish drama
+- **1923**: William Butler Yeats - Irish poetry
+- **1924**: Władysław Reymont - peasant life depiction
+- **1925**: George Bernard Shaw - dramatic works
+- **1926**: Grazia Deledda - Sardinian island life
+- **1927**: Henri Bergson - creative evolution
+- **1928**: Sigrid Undset - medieval Norwegian life
+- **1929**: Thomas Mann - "Buddenbrooks"
+- **1930**: Sinclair Lewis - social criticism
+- **1931**: Erik Axel Karlfeldt - poetry
+- **1932**: John Galsworthy - Forsyte Saga
+- **1933**: Ivan Bunin - Russian literature tradition
+- **1934**: Luigi Pirandello - dramatic innovations
+- **1935**: No award
+- **1936**: Eugene O'Neill - American drama
+- **1937**: Roger Martin du Gard - Thibault series
+- **1938**: Pearl S. Buck - Chinese peasant life
+- **1939**: Frans Eemil Sillanpää - Finnish rural life
+- **1940**: No award
+- **1941**: No award
+- **1942**: No award
+- **1943**: No award
+- **1944**: Johannes V. Jensen - long narrative works
+- **1945**: Gabriela Mistral - lyric poetry
+- **1946**: Hermann Hesse - "The Glass Bead Game"
+- **1947**: André Gide - literary and moral integrity
+- **1948**: T.S. Eliot - poetic works
+- **1949**: William Faulkner - Yoknapatawpha County novels
+- **1950**: Bertrand Russell - humanitarian writings
+- **1951**: Pär Lagerkvist - artistic vigor and true independence
+- **1952**: François Mauriac - spiritual insight
+- **1953**: Winston Churchill - historical and biographical works
+- **1954**: Ernest Hemingway - narrative mastery
+- **1955**: Halldór Laxness - Icelandic epic tradition
+- **1956**: Juan Ramón Jiménez - lyric poetry
+- **1957**: Albert Camus - clear-sighted earnestness
+- **1958**: Boris Pasternak - "Doctor Zhivago"
+- **1959**: Salvatore Quasimodo - lyric poetry
+- **1960**: Saint-John Perse - poetic evocation
+- **1961**: Ivo Andrić - epic force in history
+- **1962**: John Steinbeck - realistic and imaginative writings
+- **1963**: Giorgos Seferis - Greek poetry
+- **1964**: Jean-Paul Sartre - literary works (declined)
+- **1965**: Mikhail Sholokhov - Don Cossacks
+- **1966**: Samuel Agnon - folk tales and legends; Nelly Sachs - lyric poetry
+- **1967**: Miguel Ángel Asturias - Latin American indigenous culture
+- **1968**: Yasunari Kawabata - narrative mastery
+- **1969**: Samuel Beckett - modern literature
+- **1970**: Aleksandr Solzhenitsyn - ethical force in literature
+- **1971**: Pablo Neruda - poetic works
+- **1972**: Heinrich Böll - contemporary German literature
+- **1973**: Patrick White - Australian literary epic
+- **1974**: Eyvind Johnson, Harry Martinson - narrative art
+- **1975**: Eugenio Montale - poetic works
+- **1976**: Saul Bellow - human condition exploration
+- **1977**: Vicente Aleixandre - poetic works
+- **1978**: Isaac Bashevis Singer - Yiddish literature
+- **1979**: Odysseus Elytis - poetic works
+- **1980**: Czesław Miłosz - poetic testimony
+- **1981**: Wright Morris - photographic literature
+- **1982**: Gabriel García Márquez - magical realism
+- **1983**: Alice Munro - short story mastery
+- **1984**: Jaroslav Seifert - poetic works
+- **1985**: Claude Simon - novel innovations
+- **1986**: Wole Soyinka - dramatic literature
+- **1987**: Joseph Brodsky - poetic works
+- **1988**: Naguib Mahfouz - Arabic literature
+- **1989**: Camilo José Cela - Spanish literature
+- **1990**: Octavio Paz - poetic works
+- **1991**: Nadine Gordimer - South African literature
+- **1992**: Derek Walcott - Caribbean poetry
+- **1993**: Toni Morrison - African American experience
+- **1994**: Kenzaburō Ōe - poetic force
+- **1995**: Seamus Heaney - poetic works
+- **1996**: Wisława Szymborska - poetic precision
+- **1997**: Dario Fo - theatrical works
+- **1998**: José Saramago - parabolic fables
+- **1999**: Günter Grass - "Tin Drum"
+- **2000**: Gao Xingjian - universal values
+- **2001**: V.S. Naipaul - multicultural perspective
+- **2002**: Imre Kertész - Holocaust literature
+- **2003**: J.M. Coetzee - South African literature
+- **2004**: Elfriede Jelinek - Austrian literature
+- **2005**: Harold Pinter - dramatic works
+- **2006**: Orhan Pamuk - cultural collision exploration
+- **2007**: Doris Lessing - feminist themes
+- **2008**: J.M.G. Le Clézio - poetic adventure
+- **2009**: Alice Munro - short story mastery
+- **2010**: Mario Vargas Llosa - structural innovations
+- **2011**: Tomas Tranströmer - condensed transcendental poetry
+- **2012**: Mo Yan - folk tales and contemporary life
+- **2013**: Alice Munro - short story mastery
+- **2014**: Patrick Modiano - memory and oblivion
+- **2015**: Svetlana Alexievich - polyphonic writings
+- **2016**: Bob Dylan - poetic expressions in song
+- **2017**: Kazuo Ishiguro - memory and time
+- **2018**: Olga Tokarczuk - narrative imagination
+- **2019**: Peter Handke - linguistic ingenuity
+- **2020**: Louise Glück - autobiographical poetry
+- **2021**: Abdulrazak Gurnah - colonial legacy effects
+- **2022**: Annie Ernaux - memory and identity
+- **2023**: Jon Fosse - innovative plays and prose
+
+### Peace
+- **1901**: Henry Dunant, Frédéric Passy - peace promotion
+- **1902**: Élie Ducommun, Charles Gobat - peace congresses
+- **1903**: William Randal Cremer - arbitration promotion
+- **1904**: Institute of International Law - international law
+- **1905**: Bertha von Suttner - peace literature
+- **1906**: Theodore Roosevelt - Portsmouth Treaty
+- **1907**: Ernesto Teodoro Moneta, Louis Renault - arbitration and international law
+- **1908**: Klas Pontus Arnoldson, Fredrik Bajer - peace congresses
+- **1909**: Auguste Beernaert, Paul d'Estournelles de Constant - arbitration
+- **1910**: International Peace Bureau - peace promotion
+- **1911**: Alfred Hermann Fried, Tobias Asser - peace literature and arbitration
+- **1912**: Elihu Root - arbitration promotion
+- **1913**: Henri La Fontaine - international arbitration
+- **1914**: No award
+- **1915**: No award
+- **1916**: No award
+- **1917**: International Committee of the Red Cross - humanitarian work
+- **1918**: No award
+- **1919**: Woodrow Wilson - League of Nations
+- **1920**: Léon Bourgeois - League of Nations
+- **1921**: Hjalmar Branting, Christian Lange - peace work
+- **1922**: Fridtjof Nansen - refugee relief
+- **1923**: No award
+- **1924**: No award
+- **1925**: Austen Chamberlain, Charles Dawes - Locarno Treaties
+- **1926**: Aristide Briand, Gustav Stresemann - Franco-German reconciliation
+- **1927**: Ferdinand Buisson, Ludwig Quidde - peace education
+- **1928**: No award
+- **1929**: Frank Kellogg - Kellogg-Briand Pact
+- **1930**: Nathan Söderblom - ecumenical movement
+- **1931**: Jane Addams, Nicholas Butler - peace work
+- **1932**: No award
+- **1933**: Norman Angell - war economic futility
+- **1934**: Arthur Henderson - disarmament work
+- **1935**: Carl von Ossietzky - pacifist work
+- **1936**: Carlos Saavedra Lamas - Chaco War mediation
+- **1937**: Viscount Cecil - League of Nations
+- **1938**: Nansen International Office for Refugees - refugee work
+- **1939**: No award
+- **1940**: No award
+- **1941**: No award
+- **1942**: No award
+- **1943**: No award
+- **1944**: International Committee of the Red Cross - humanitarian work
+- **1945**: Cordell Hull - United Nations
+- **1946**: Emily Greene Balch, John Mott - peace work
+- **1947**: Friends Service Council, American Friends Service Committee - relief work
+- **1948**: No award
+- **1949**: Lord Boyd Orr - food and peace work
+- **1950**: Ralph Bunche - Palestine mediation
+- **1951**: Léon Jouhaux - trade union work
+- **1952**: Albert Schweitzer - humanitarian philosophy
+- **1953**: George Marshall - Marshall Plan
+- **1954**: United Nations High Commissioner for Refugees - refugee work
+- **1955**: No award
+- **1956**: No award
+- **1957**: Lester B. Pearson - Suez Crisis diplomacy
+- **1958**: Georges Pire - refugee work
+- **1959**: Philip Noel-Baker - disarmament work
+- **1960**: Albert Lutuli - anti-apartheid struggle
+- **1961**: Dag Hammarskjöld - UN peacekeeping
+- **1962**: Linus Pauling - nuclear test ban
+- **1963**: International Committee of the Red Cross, League of Red Cross Societies - humanitarian work
+- **1964**: Martin Luther King Jr. - civil rights nonviolence
+- **1965**: United Nations Children's Fund - child welfare
+- **1966**: No award
+- **1967**: No award
+- **1968**: René Cassin - human rights work
+- **1969**: International Labour Organization - labor standards
+- **1970**: Norman Borlaug - green revolution
+- **1971**: Willy Brandt - Ostpolitik
+- **1972**: No award
+- **1973**: Henry Kissinger, Lê Đức Thọ - Paris Peace Accords
+- **1974**: Eisaku Satō - nuclear non-proliferation; Seán MacBride, International Peace Bureau - peace work
+- **1975**: Andrei Sakharov - human rights advocacy
+- **1976**: Betty Williams, Mairead Corrigan - Northern Ireland peace
+- **1977**: Amnesty International - human rights work
+- **1978**: Anwar Sadat, Menachem Begin - Camp David Accords
+- **1979**: Mother Teresa - humanitarian work
+- **1980**: Adolfo Pérez Esquivel - human rights work
+- **1981**: United Nations High Commissioner for Refugees - refugee work
+- **1982**: Alva Myrdal, Alfonso García Robles - disarmament work
+- **1983**: Lech Wałęsa - Solidarity movement
+- **1984**: Desmond Tutu - anti-apartheid work
+- **1985**: International Physicians for the Prevention of Nuclear War - anti-nuclear work
+- **1986**: Elie Wiesel - Holocaust remembrance
+- **1987**: Óscar Arias - Central America peace plan
+- **1988**: United Nations Peacekeeping Forces - peacekeeping work
+- **1989**: Dalai Lama - Tibetan rights nonviolence
+- **1990**: Mikhail Gorbachev - Cold War end
+- **1991**: Aung San Suu Kyi - democracy nonviolence
+- **1992**: Rigoberta Menchú - indigenous rights
+- **1993**: Nelson Mandela, F.W. de Klerk - anti-apartheid transition
+- **1994**: Yasser Arafat, Shimon Peres, Yitzhak Rabin - Oslo Accords
+- **1995**: Joseph Rotblat, Pugwash Conferences - nuclear disarmament
+- **1996**: Carlos Belo, José Ramos-Horta - East Timor independence
+- **1997**: International Campaign to Ban Landmines, Jody Williams - landmine ban
+- **1998**: John Hume, David Trimble - Northern Ireland peace
+- **1999**: Médecins Sans Frontières - humanitarian work
+- **2000**: Kim Dae-jung - Korean democracy
+- **2001**: United Nations, Kofi Annan - global leadership
+- **2002**: Jimmy Carter - conflict resolution
+- **2003**: Shirin Ebadi - women's rights
+- **2004**: Wangari Maathai - environmental work
+- **2005**: International Atomic Energy Agency, Mohamed ElBaradei - nuclear non-proliferation
+- **2006**: Muhammad Yunus, Grameen Bank - microfinance
+- **2007**: Al Gore, Intergovernmental Panel on Climate Change - climate change awareness
+- **2008**: Martti Ahtisaari - Kosovo independence mediation
+- **2009**: Barack Obama - international relations
+- **2010**: Liu Xiaobo - human rights advocacy
+- **2011**: Ellen Johnson Sirleaf, Leymah Gbowee, Tawakkol Karman - women's rights
+- **2012**: European Union - peace and reconciliation
+- **2013**: Organisation for the Prohibition of Chemical Weapons - chemical weapons elimination
+- **2014**: Kailash Satyarthi, Malala Yousafzai - children's rights
+- **2015**: Tunisian National Dialogue Quartet - democratic transition
+- **2016**: Juan Manuel Santos - Colombian peace process
+- **2017**: International Campaign to Abolish Nuclear Weapons - nuclear weapons ban
+- **2018**: Denis Mukwege, Nadia Murad - sexual violence prevention
+- **2019**: Abiy Ahmed - Ethiopia-Eritrea peace
+- **2020**: World Food Programme - hunger fight
+- **2021**: Maria Ressa, Dmitry Muratov - press freedom
+- **2022**: Ales Bialiatski, Memorial, Center for Civil Liberties - human rights
+- **2023**: Narges Mohammadi - women's rights in Iran
+
+### Economic Sciences
+- **1969**: Ragnar Frisch, Jan Tinbergen - econometrics
+- **1970**: Paul Samuelson - economic theory advancement
+- **1971**: Simon Kuznets - economic growth measurement
+- **1972**: John Hicks, Kenneth Arrow - general equilibrium and welfare economics
+- **1973**: Wassily Leontief - input-output analysis
+- **1974**: Gunnar Myrdal, Friedrich Hayek - economic theory and interdependence
+- **1975**: Leonid Kantorovich, Tjalling Koopmans - resource allocation theory
+- **1976**: Milton Friedman - consumption analysis and monetary theory
+- **1977**: Bertil Ohlin, James Meade - international trade theory
+- **1978**: Herbert Simon - decision-making processes
+- **1979**: Theodore Schultz, Arthur Lewis - economic development
+- **1980**: Lawrence Klein - economic forecasting models
+- **1981**: James Tobin - financial markets and employment
+- **1982**: George Stigler - information economics
+- **1983**: Gerard Debreu - general equilibrium theory
+- **1984**: Richard Stone - national accounts system
+- **1985**: Franco Modigliani - savings and financial markets
+- **1986**: James Buchanan - public choice theory
+- **1987**: Robert Solow - economic growth theory
+- **1988**: Maurice Allais - market equilibrium theory
+- **1989**: Trygve Haavelmo - econometrics
+- **1990**: Harry Markowitz, Merton Miller, William Sharpe - financial economics
+- **1991**: Ronald Coase - property rights and transaction costs
+- **1992**: Gary Becker - microeconomic analysis
+- **1993**: Robert Fogel, Douglass North - economic history
+- **1994**: John Harsanyi, John Nash, Reinhard Selten - game theory
+- **1995**: Robert Lucas - rational expectations theory
+- **1996**: James Mirrlees, William Vickrey - mechanism design theory
+- **1997**: Robert Merton, Myron Scholes - derivative pricing
+- **1998**: Amartya Sen - welfare economics
+- **1999**: Robert Mundell - optimum currency areas
+- **2000**: James Heckman - microeconometrics
+- **2001**: George Akerlof, Michael Spence, Joseph Stiglitz - information asymmetry
+- **2002**: Daniel Kahneman - prospect theory
+- **2003**: Robert Engle, Clive Granger - time series analysis
+- **2004**: Finn Kydland, Edward Prescott - macroeconomic dynamics
+- **2005**: Robert Aumann, Thomas Schelling - game theory
+- **2006**: Edmund Phelps - macroeconomic policy
+- **2007**: Leonid Hurwicz, Eric Maskin, Roger Myerson - mechanism design
+- **2008**: Paul Krugman - international trade theory
+- **2009**: Elinor Ostrom - economic governance; Oliver Williamson - transaction cost economics
+- **2010**: Peter Diamond, Dale Mortensen, Christopher Pissarides - labor market theory
+- **2011**: Thomas Sargent, Christopher Sims - macroeconomic causation
+- **2012**: Alvin Roth, Lloyd Shapley - market design
+- **2013**: Eugene Fama, Lars Peter Hansen, Robert Shiller - asset pricing
+- **2014**: Jean Tirole - market power and regulation
+- **2015**: Angus Deaton - consumption and poverty
+- **2016**: Oliver Hart, Bengt Holmström - contract theory
+- **2017**: Richard Thaler - behavioral economics
+- **2018**: William Nordhaus - climate economics; Paul Romer - economic growth
+- **2019**: Abhijit Banerjee, Esther Duflo, Michael Kremer - poverty alleviation
+- **2020**: Paul Milgrom, Robert Wilson - auction theory
+- **2021**: David Card - labor economics; Joshua Angrist, Guido Imbens - causal inference
+- **2022**: Ben Bernanke, Douglas Diamond, Philip Dybvig - banking and financial crises
+- **2023**: Claudia Goldin - women's labor market analysis
+
+The Nobel Prizes represent the highest recognition of human achievement across scientific, literary, and humanitarian fields.
